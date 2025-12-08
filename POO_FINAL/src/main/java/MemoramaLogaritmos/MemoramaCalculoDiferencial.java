@@ -30,7 +30,7 @@ public class MemoramaCalculoDiferencial extends JFrame {
     private void configurarVentana() {
         setTitle("Memorama - Propiedades Log/Exp/Rad");
         setSize(700, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
         getContentPane().setBackground(COLOR_FONDO);

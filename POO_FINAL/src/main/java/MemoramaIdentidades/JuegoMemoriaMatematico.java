@@ -59,7 +59,7 @@ public class JuegoMemoriaMatematico extends JFrame {
     public JuegoMemoriaMatematico() {
         setTitle("Juego de Memoria - Trigonométrico (2 Jugadores)");
         setSize(1000, 600); // Tamaño ajustado para 5x6 y 5 etiquetas
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
 
         // 1. Inicializar la base de datos de pares

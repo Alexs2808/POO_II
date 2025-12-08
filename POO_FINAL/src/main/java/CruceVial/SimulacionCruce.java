@@ -15,7 +15,7 @@ public class SimulacionCruce extends JFrame {
 
     public SimulacionCruce() {
         setSize(800, 800);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         PanelCruce panel = new PanelCruce();
         add(panel);

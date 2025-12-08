@@ -8,6 +8,7 @@ import CruceVial.SimulacionCruce;
 import MemoramaDerivadas.PrincipalDerivadas;
 import MemoramaIdentidades.JuegoMemoriaMatematico;
 import MemoramaLogaritmos.MemoramaCalculoDiferencial;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -163,7 +164,14 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jb_registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_registroActionPerformed
-        // TODO add your handling code here:
+        String nombreJugador = JOptionPane.showInputDialog(this, "Ingresa tu nombre:");
+
+        if (nombreJugador != null && !nombreJugador.trim().isEmpty()) {
+        PrincipalDerivadas derivadas = new PrincipalDerivadas();
+        // **Falta una forma de pasar el nombre a la lógica del juego**
+        // derivadas.setNombreJugador(nombreJugador); 
+        derivadas.setVisible(true);
+    }
     }//GEN-LAST:event_jb_registroActionPerformed
 
     private void jb_resultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_resultadosActionPerformed
@@ -171,7 +179,18 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_resultadosActionPerformed
 
     private void jb_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_salirActionPerformed
-        // TODO add your handling code here:
+        int respuesta = JOptionPane.showConfirmDialog(
+        this,
+        "¿Estás seguro de que deseas salir de la aplicación?",
+        "Confirmar Salida",
+        JOptionPane.YES_NO_OPTION,
+        JOptionPane.QUESTION_MESSAGE
+        );
+    
+    // Si la respuesta es SÍ, se cierra la aplicación
+    if (respuesta == JOptionPane.YES_OPTION) {
+        System.exit(0);
+    }
     }//GEN-LAST:event_jb_salirActionPerformed
 
     private void jb_derivadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_derivadasActionPerformed

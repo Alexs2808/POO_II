@@ -1,4 +1,6 @@
 MemoramaDerivadas\PrincipalDerivadas$1.class
+CruceVial\PanelCruce.class
+CruceVial\Vehiculo.class
 MemoramaDerivadas\PrincipalDerivadas$8.class
 MemoramaDerivadas\PrincipalDerivadas$3.class
 com\mycompany\poo_final\MENU_PRINCIPAL$5.class
@@ -9,6 +11,7 @@ MemoramaLogaritmos\MemoramaCalculoDiferencial.class
 MemoramaLogaritmos\VentanaJuego$1.class
 MemoramaLogaritmos\MemoramaCalculoDiferencial$1.class
 MemoramaDerivadas\PrincipalDerivadas$5.class
+CruceVial\SimulacionCruce.class
 MemoramaDerivadas\PrincipalDerivadas$2.class
 MemoramaDerivadas\Utilities$1.class
 MemoramaDerivadas\Utilities.class
@@ -22,10 +25,10 @@ com\mycompany\poo_final\MENU_PRINCIPAL$1.class
 MemoramaDerivadas\PrincipalDerivadas.class
 com\mycompany\poo_final\MENU_PRINCIPAL$6.class
 MemoramaLogaritmos\Tarjeta.class
-com\mycompany\poo_final\POO_FINAL.class
 MemoramaDerivadas\PrincipalDerivadas$4.class
 MemoramaDerivadas\PrincipalDerivadas$6.class
 MemoramaDerivadas\PrincipalDerivadas$9.class
+com\mycompany\poo_final\MENU_PRINCIPAL$8.class
 com\mycompany\poo_final\MENU_PRINCIPAL$3.class
 MemoramaDerivadas\Match.class
 MemoramaLogaritmos\VentanaJuego.class

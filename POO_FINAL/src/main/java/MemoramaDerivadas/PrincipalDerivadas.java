@@ -7,6 +7,7 @@ package MemoramaDerivadas;
 
 
 import java.util.List;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
@@ -31,6 +32,8 @@ public class PrincipalDerivadas extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Memory");
         this.setLocationRelativeTo(this);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         u.imgStart();
         startTimer();
 
