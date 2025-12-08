@@ -4,6 +4,11 @@
  */
 package com.mycompany.poo_final;
 
+import CruceVial.SimulacionCruce;
+import MemoramaDerivadas.PrincipalDerivadas;
+import MemoramaIdentidades.JuegoMemoriaMatematico;
+import MemoramaLogaritmos.MemoramaCalculoDiferencial;
+
 /**
  *
  * @author Alexs
@@ -27,10 +32,10 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jb_derivadas = new javax.swing.JButton();
+        jb_identidades = new javax.swing.JButton();
+        jb_logaritmos = new javax.swing.JButton();
+        jb_semaforo = new javax.swing.JButton();
         jb_registro = new javax.swing.JButton();
         jb_resultados = new javax.swing.JButton();
         jb_salir = new javax.swing.JButton();
@@ -38,13 +43,33 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("jButton1");
+        jb_derivadas.setText("jButton1");
+        jb_derivadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_derivadasActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("jButton3");
+        jb_identidades.setText("jButton3");
+        jb_identidades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_identidadesActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("jButton2");
+        jb_logaritmos.setText("jButton2");
+        jb_logaritmos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_logaritmosActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("jButton4");
+        jb_semaforo.setText("jButton4");
+        jb_semaforo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_semaforoActionPerformed(evt);
+            }
+        });
 
         jb_registro.setText("Registro");
         jb_registro.addActionListener(new java.awt.event.ActionListener() {
@@ -82,13 +107,13 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jb_derivadas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jb_identidades, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jb_logaritmos, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jb_semaforo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jb_resultados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -103,22 +128,20 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jb_derivadas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_identidades, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jb_logaritmos, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_semaforo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jb_registro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(103, 103, 103))
+                            .addComponent(jb_registro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(75, 75, 75)
                                 .addComponent(jb_resultados, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(28, 28, 28)
                         .addComponent(jb_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
@@ -150,6 +173,30 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
     private void jb_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_salirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_salirActionPerformed
+
+    private void jb_derivadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_derivadasActionPerformed
+        PrincipalDerivadas derivadas = new PrincipalDerivadas();
+        derivadas.setVisible(true);
+        derivadas.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jb_derivadasActionPerformed
+
+    private void jb_identidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_identidadesActionPerformed
+        JuegoMemoriaMatematico identidades = new JuegoMemoriaMatematico();
+        identidades.setVisible(true);
+        identidades.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jb_identidadesActionPerformed
+
+    private void jb_logaritmosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_logaritmosActionPerformed
+        MemoramaCalculoDiferencial logaritmos = new MemoramaCalculoDiferencial();
+        logaritmos.setVisible(true);
+        logaritmos.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jb_logaritmosActionPerformed
+
+    private void jb_semaforoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_semaforoActionPerformed
+        SimulacionCruce semaforo = new SimulacionCruce();
+        semaforo.setVisible(true);
+        semaforo.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jb_semaforoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,14 +234,14 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jb_derivadas;
+    private javax.swing.JButton jb_identidades;
+    private javax.swing.JButton jb_logaritmos;
     private javax.swing.JButton jb_registro;
     private javax.swing.JButton jb_resultados;
     private javax.swing.JButton jb_salir;
+    private javax.swing.JButton jb_semaforo;
     // End of variables declaration//GEN-END:variables
 }
